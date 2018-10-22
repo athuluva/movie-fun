@@ -12,5 +12,7 @@ spring:
     suffix: .jsp
 
   logging.level:
-    root: INFO
-    org.superbiz.moviefun: DEBUG
+    root: WARN
+    org.superbiz.moviefun: INFO
+    org.superbiz.moviefun.movies: DEBUG
+    org.superbiz.moviefun.albums: DEBUG

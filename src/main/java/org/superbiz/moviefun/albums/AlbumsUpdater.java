@@ -48,7 +48,9 @@ public class AlbumsUpdater {
         }
 
         List<Album> albumsToHave = readFromCsv(objectReader, maybeBlob.get().inputStream);
+        logger.info("Number of rows in albums.csv = " + albumsToHave.size());
         List<Album> albumsWeHave = albumsBean.getAlbums();
+        logger.info("Number of rows in memory = " + albumsWeHave.size());
 
         createNewAlbums(albumsToHave, albumsWeHave);
         deleteOldAlbums(albumsToHave, albumsWeHave);
